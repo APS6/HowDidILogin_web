@@ -1,16 +1,188 @@
 ---
-
+import { Image } from "astro:assets";
+import Logo from "../images/logo.webp";
+import Example from "../images/examples.webp";
+import "@fontsource/poppins/400.css";
+import "@fontsource/poppins/500.css";
+import "@fontsource/poppins/600.css";
+import "@fontsource/poppins/700.css";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+<html class="" lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <link rel="icon" href="/favicon.ico" />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="/favicon-16x16.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/favicon-32x32.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="/apple-touch-icon.png"
+        />
+        <link rel="manifest" href="/site.webmanifest" />
+        <meta name="viewport" content="width=device-width" />
+        <meta name="generator" content="{Astro.generator}" />
+        <title>How Did I Login | Browser Extension</title>
+        <meta
+            name="description"
+            content="How did I Login remembers login methods of all websites for you. The next time it places a ‘last used’ marker on the correct method. Available on Chrome and Firefox"
+        />
+        <meta
+            name="keywords"
+            content="Login Method, Remember Login, How did I login, login method, Remember sign in"
+        />
+        <meta
+            property="og:title"
+            content="How Did I Login | Browser Extension"
+        />
+        <meta
+            property="og:description"
+            content="How did I Login remembers login methods of all websites for you. The next time it places a ‘last used’ marker on the correct method. Available on Chrome and Firefox"
+        />
+        <meta
+            property="og:image"
+            content="https://lastused.anirudha.pro/openGraph.png"
+        />
+        <meta property="og:url" content="https://lastused.anirudha.pro/" />
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta
+            property="twitter:title"
+            content="How Did I Login | Browser Extension"
+        />
+        <meta
+            property="twitter:description"
+            content="How did I Login remembers login methods of all websites for you. The next time it places a ‘last used’ marker on the correct method. Available on Chrome and Firefox"
+        />
+        <meta
+            property="twitter:image"
+            content="https://lastused.anirudha.pro/logo.png"
+        />
+    </head>
+    <body class="bg-white text-black font-poppins">
+        <nav
+            class="fixed top-0 left-0 w-full pt-3 px-2 md:px-6 flex justify-between items-center"
+        >
+            <div class="flex items-center gap-3">
+                <Image
+                    src={Logo}
+                    alt="How Did I Login logo"
+                    width={40}
+                    height={40}
+                    loading="eager"
+                />
+                <h2 class="font-bold text-2xl text-dBlue">How Did I Login</h2>
+            </div>
+            <div>
+                <a
+                    id="dynamicLink"
+                    href="https://chrome.google.com/webstore/detail/ngooccldglhoehgmbeflgnlcebnnhkeg"
+                    class="hidden md:block bg-lBlue text-dBlue font-semibold text-lg py-2 px-6"
+                    >Add to Chrome</a
+                >
+                <a
+                    id="mobileDynamicLink"
+                    href="https://chrome.google.com/webstore/detail/ngooccldglhoehgmbeflgnlcebnnhkeg"
+                    class="md:hidden bg-lBlue text-dBlue font-semibold text-lg py-2 px-6"
+                    >Download</a
+                >
+            </div>
+        </nav>
+
+        <div class="h-[69vh] h-[69svh] grid place-items-center">
+            <div class="max-w-4xl flex flex-col items-center">
+                <h1
+                    class="text-5xl md:text-[5rem] leading-[1.1] font-bold text-dBlue text-center"
+                >
+                    <span class="text-mBlue">Never Forget</span> How You logged in
+                    again
+                </h1>
+                <p class="text-center text-xl text-dBlue max-w-xl mt-6">
+                    Track and remember your login methods across different
+                    websites with ease
+                </p>
+                <div class="flex gap-6 mt-6">
+                    <a
+                        href="https://chrome.google.com/webstore/detail/ngooccldglhoehgmbeflgnlcebnnhkeg"
+                        class="bg-lBlue text-dBlue font-semibold text-xl py-4 px-12"
+                        >Chrome</a
+                    >
+                    <a
+                        href="https://addons.mozilla.org/en-US/firefox/addon/how-did-i-login/"
+                        class="bg-lBlue text-dBlue font-semibold text-xl py-4 px-12"
+                        >Firefox</a
+                    >
+                </div>
+            </div>
+        </div>
+        <div class="w-[calc(100%-3rem)] mx-6 bg-dBlue h-[1px]"></div>
+        <div class="flex flex-col md:flex-row justify-between px-6 pt-12 pb-4">
+            <div class="md:w-[60%]">
+                <div>
+                    <h2 class="font-semibold text-dBlue text-3xl">
+                        What does it Do?
+                    </h2>
+                    <p class="text-lg max-w-4xl">
+                        Have you ever found yourself wondering which method you
+                        used to sign in to a website? Google? Apple? Microsoft?
+                        Email? How Did I login solves this, it detects and
+                        records what method you use to login. The next time it
+                        places a ‘last used’ marker on the correct method.
+                    </p>
+                </div>
+                <div class="mt-8">
+                    <h2 class="font-semibold text-dBlue text-3xl">
+                        Is it safe?
+                    </h2>
+                    <p class="text-lg max-w-4xl">
+                        Yes, All the data is stored securely on your device. No
+                        data ever leaves your browser, ensuring convenience and
+                        privacy.
+                    </p>
+                </div>
+            </div>
+            <div class="md:w-[35%] mt-8 md:mt-0">
+                <Image
+                    src={Example}
+                    alt="Login Sections of three different websites with methods marked with 'last used' by extension."
+                    class="object-fit"
+                />
+            </div>
+        </div>
+        <script>
+            const dynamicLink = document.getElementById("dynamicLink");
+            const mobileDynamicLink =
+                document.getElementById("mobileDynamicLink");
+            const isChrome = navigator.userAgentData
+                ? navigator.userAgentData.brands.some((brand) =>
+                      brand.brand.includes("Chromium"),
+                  )
+                : /Chrome/.test(navigator.userAgent) &&
+                  !/Edg/.test(navigator.userAgent);
+            const isFirefox = typeof InstallTrigger !== "undefined";
+
+            if (isChrome) {
+                dynamicLink.textContent = "Add to Chrome";
+                dynamicLink.href =
+                    "https://chrome.google.com/webstore/detail/ngooccldglhoehgmbeflgnlcebnnhkeg";
+                mobileDynamicLink.href =
+                    "https://chrome.google.com/webstore/detail/ngooccldglhoehgmbeflgnlcebnnhkeg";
+            } else if (isFirefox) {
+                dynamicLink.textContent = "Add to Firefox";
+                dynamicLink.href =
+                    "https://addons.mozilla.org/en-US/firefox/addon/how-did-i-login/";
+                mobileDynamicLink.href =
+                    "https://addons.mozilla.org/en-US/firefox/addon/how-did-i-login/";
+            }
+        </script>
+    </body>
 </html>
