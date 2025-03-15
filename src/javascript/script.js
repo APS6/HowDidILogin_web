@@ -29,3 +29,34 @@ faqs.forEach((question) => {
       question.dataset.active === "true" ? "false" : "true";
   });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const videos = document.querySelectorAll("video");
+  let currentVideoIndex = 0;
+  let firstVideoVisible = false;
+
+  function playNextVideo() {
+    if (!firstVideoVisible) return;
+    videos[currentVideoIndex].pause();
+    currentVideoIndex = (currentVideoIndex + 1) % videos.length;
+    videos[currentVideoIndex].play();
+  }
+
+  videos.forEach((video) => {
+    video.addEventListener("ended", playNextVideo);
+  });
+
+  const observer = new IntersectionObserver(
+    ([entry]) => {
+      firstVideoVisible = entry.isIntersecting;
+      if (firstVideoVisible) {
+        videos[currentVideoIndex].play();
+      } else {
+        videos[currentVideoIndex].pause();
+      }
+    },
+    { threshold: 0.5 },
+  );
+
+  observer.observe(videos[0]);
+});
